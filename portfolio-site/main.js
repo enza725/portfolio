@@ -15,3 +15,12 @@ function setTheme(t, btn) {
   document.querySelectorAll('.tbtn').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
 }
+
+async function loadPart(id, file) {
+  const res = await fetch(file);
+  const html = await res.text();
+  document.getElementById(id).innerHTML = html;
+} 
+
+loadPart('left', 'html/left-aside.html');
+loadPart('right', 'html/right-container.html');

@@ -1,0 +1,100 @@
+<div class="topbar">
+  <div class="crumb"><strong id="cn">01</strong><span id="cj">About Me</span></div>
+  <button class="btn-contact" onclick="go('contact',document.querySelectorAll('.ni')[3])">Contact Me</button>
+</div>
+<div class="content">
+  <!-- ABOUT -->
+  <div class="panel active" id="panel-about">
+    <div class="about-grid">
+      <div>
+        <div class="stitle"><span class="dot"></span>About Me</div>
+        <p class="about-body">台湾出身、現在は東京を拠点にフロントエンド開発を行っています。前職では広告業界でWeb制作や運用に携わり、ユーザー視点でのUI/UX設計を学びました。<br><br>現在はより良いユーザー体験を提供できるプロダクト開発を目指して日々学習しています。</p>
+        <div class="traits">
+          <span class="trait">📖 学ぶことが好き</span>
+          <span class="trait">✦ シンプルなコード</span>
+          <span class="trait">☕ コーヒー好き</span>
+        </div>
+      </div>
+      <div class="about-img">
+        <svg width="82" height="128" viewBox="0 0 82 128" fill="none">
+          <line x1="41" y1="14" x2="41" y2="50" stroke="#c8a070" stroke-width="1.2"/>
+          <line x1="41" y1="22" x2="24" y2="9"  stroke="#c8a070" stroke-width="0.9"/>
+          <line x1="41" y1="33" x2="57" y2="17" stroke="#c8a070" stroke-width="0.9"/>
+          <line x1="41" y1="19" x2="52" y2="5"  stroke="#c8a070" stroke-width="0.75"/>
+          <line x1="41" y1="30" x2="29" y2="19" stroke="#c8a070" stroke-width="0.75"/>
+          <ellipse cx="24" cy="8"  rx="2.8" ry="2"   fill="#e8c090" opacity="0.8"/>
+          <ellipse cx="58" cy="15" rx="2.8" ry="2"   fill="#d4a070" opacity="0.7"/>
+          <ellipse cx="53" cy="4"  rx="2.2" ry="1.6" fill="#e8c090" opacity="0.9"/>
+          <ellipse cx="29" cy="18" rx="1.8" ry="1.3" fill="#c89060" opacity="0.6"/>
+          <rect x="33" y="50" width="16" height="16" rx="3.5" fill="#c8a878" opacity="0.85"/>
+          <path d="M24 66 Q19 75 21 100 Q23 118 41 121 Q59 118 61 100 Q63 75 58 66Z" fill="#c8a878" opacity="0.9"/>
+          <path d="M24 66 Q33 62 41 62 Q49 62 58 66" stroke="#b09060" stroke-width="1.1" fill="none"/>
+          <path d="M30 79 Q28 91 30 104" stroke="white" stroke-width="1.4" opacity="0.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="panel" id="panel-skills">
+    <div class="stitle"><span class="dot"></span>Skills</div>
+    <div class="sg">
+      <div class="sg-name">Frontend</div>
+      <div class="stags">
+        <span class="stag">HTML</span><span class="stag">CSS</span><span class="stag">JavaScript</span>
+        <span class="stag">TypeScript</span><span class="stag">React</span>
+        <span class="stag">Next.js</span><span class="stag">Tailwind CSS</span>
+      </div>
+    </div>
+    <div class="sg">
+      <div class="sg-name">Tools</div>
+      <div class="stags">
+        <span class="stag">Git</span><span class="stag">GitHub</span>
+        <span class="stag">VS Code</span><span class="stag">Figma</span>
+      </div>
+    </div>
+    <div class="sg">
+      <div class="sg-name">Others</div>
+      <div class="stags">
+        <span class="stag">Responsive Design</span>
+        <span class="stag">API Integration</span>
+        <span class="stag">UI/UX</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="panel" id="panel-projects">
+    <div class="stitle"><span class="dot"></span>Projects</div>
+    <div class="plist">
+      <div class="pitem">
+        <div class="pnum">01</div>
+        <div><div class="pname">Taskly</div><div class="psub">Next.js · TypeScript · Tailwind CSS — タスク管理アプリ</div></div>
+        <div class="parrow">↗</div>
+      </div>
+      <div class="pitem">
+        <div class="pnum">02</div>
+        <div><div class="pname">Weather App</div><div class="psub">React · TypeScript · OpenWeather API — 天気情報を検索できるアプリ</div></div>
+        <div class="parrow">↗</div>
+      </div>
+      <div class="pitem">
+        <div class="pnum">03</div>
+        <div><div class="pname">Portfolio Website</div><div class="psub">Next.js · Tailwind CSS — このポートフォリオサイト</div></div>
+        <div class="parrow">↗</div>
+      </div>
+    </div>
+    <div class="viewall">View All Projects →</div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="panel" id="panel-contact">
+    <div class="stitle"><span class="dot"></span>Contact Me</div>
+    <p class="csub">お仕事のご相談やご質問など、お気軽にご連絡ください！</p>
+    <div class="cform">
+      <div><label class="flbl">Name</label><input class="fin" type="text" placeholder="Your name"></div>
+      <div><label class="flbl">Email</label><input class="fin" type="email" placeholder="hello@example.com"></div>
+      <div class="s2"><label class="flbl">Message</label><textarea class="fta" placeholder="Write your message..."></textarea></div>
+      <div class="fsub"><button class="btn-send">Send Message</button></div>
+    </div>
+  </div>
+</div>
