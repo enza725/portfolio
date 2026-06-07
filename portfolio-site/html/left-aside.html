@@ -1,41 +1,107 @@
-<div class="avatar">🌸</div>
-<div class="role">Frontend Engineer</div>
-<h1 class="name">Yui<br><em>Chen</em></h1>
-<p class="tagline">ユーザーにとって価値のある体験を、シンプルで使いやすいUIで実現することを大切にしています。</p>
+<aside class="left-aside">
+  <div class="l-aside-img-div">
+    <div>
+      <img class="l-aside-img" src="./img/info.jpg" alt="自分の写真">
+    </div>
+  </div>
+  <div class="l-aside-role">Frontend Engineer</div>
+  <h1 class="l-aside-name">Huang Aien</h1>
+  <p class="l-aside-tagline">ユーザーにとって、シンプルで使いやすいことを大切にしています。</p>
 
-<div class="contacts">
-  <a class="ci" href="#"><span class="sym">@</span>hello@yuichen.dev</a>
-  <a class="ci" href="#"><span class="sym">↟</span>Tokyo, Japan</a>
-  <a class="ci" href="#"><span class="sym">/</span>github.com/yuichen-dev</a>
-</div>
+  <div class="l-aside-info">
+    <p class="l-aside-info-li">
+      <a>
+        <span class="l-aside-info-sym">↟</span>
+        Tokyo, Japan
+      </a>
+    </p>
+    <p class="l-aside-info-li">
+      <a href="https://github.com/enza725" target="_blank">
+        <span class="l-aside-info-sym">/</span>
+        github.com/enza725
+      </a>
+    </p>
+  </div>
 
-<nav class="nav">
-  <div class="ni active" onclick="go('about',this)">
-    <div class="ni-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
-    <span class="ni-lbl">About Me</span><span class="ni-num">01</span>
-  </div>
-  <div class="ni" onclick="go('skills',this)">
-    <div class="ni-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-    <span class="ni-lbl">Skills</span><span class="ni-num">02</span>
-  </div>
-  <div class="ni" onclick="go('projects',this)">
-    <div class="ni-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-    <span class="ni-lbl">Projects</span><span class="ni-num">03</span>
-  </div>
-  <div class="ni" onclick="go('contact',this)">
-    <div class="ni-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.03 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0122 14.92z"/></svg></div>
-    <span class="ni-lbl">Contact</span><span class="ni-num">04</span>
-  </div>
-</nav>
+  <nav class="l-aside-nav">
+    <div class="l-aside-ni active" onclick="navSelect('about',this)">
+      <div class="l-aside-ni-icon">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+      </div>
+      <span class="l-aside-ni-lbl">About Me</span>
+      <span class="l-aside-ni-num">01</span>
+    </div>
+    <div class="l-aside-ni" onclick="navSelect('skills',this)">
+      <div class="l-aside-ni-icon">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+        </svg>
+      </div>
+      <span class="l-aside-ni-lbl">Skills</span>
+      <span class="l-aside-ni-num">02</span>
+    </div>
+    <div class="l-aside-ni" onclick="navSelect('projects',this)">
+      <div class="l-aside-ni-icon">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+        </svg>
+      </div>
+      <span class="l-aside-ni-lbl">Projects</span>
+      <span class="l-aside-ni-num">03</span>
+    </div>
+    <div class="l-aside-ni" onclick="navSelect('contact',this)">
+      <div class="l-aside-ni-icon">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.03 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0122 14.92z"/>
+        </svg>
+      </div>
+      <span class="l-aside-ni-lbl">Contact</span>
+      <span class="l-aside-ni-num">04</span>
+    </div>
+  </nav>
 
-<div class="tsw">
-  <div class="tsw-label">Theme</div>
-  <div class="tsw-row">
-    <button class="tbtn on" onclick="setTheme('default',this)"><span class="tswatch sw-d"></span>Default</button>
-    <button class="tbtn"    onclick="setTheme('dark',this)">   <span class="tswatch sw-k"></span>Dark</button>
-    <button class="tbtn"    onclick="setTheme('light',this)">  <span class="tswatch sw-l"></span>Light</button>
-    <button class="tbtn"    onclick="setTheme('warm',this)">   <span class="tswatch sw-w"></span>Warm</button>
+  <div class="l-aside-theme">
+    <div class="l-aside-theme-title">Theme</div>
+    <div class="l-aside-theme-row">
+      <button class="l-aside-theme-btn on" onclick="setTheme('default',this)">
+        <div class="l-aside-theme-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16">
+            <path d="M8,0 A8,8 0 0,0 8,16 Z" fill="#1C1410"/>
+            <path d="M8,0 A8,8 0 0,1 8,16 Z" fill="#FBF6F0"/>
+          </svg>
+        </div>
+        Default
+      </button>
+      <button class="l-aside-theme-btn" onclick="setTheme('dark',this)">
+        <div class="l-aside-theme-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16">
+            <path d="M8,0 A8,8 0 0,0 8,16 Z" fill="#1B1A1F"/>
+            <path d="M8,0 A8,8 0 0,1 8,16 Z" fill="#25232B"/>
+          </svg>
+        </div>
+        Dark
+      </button>
+      <button class="l-aside-theme-btn" onclick="setTheme('light',this)">
+        <div class="l-aside-theme-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16">
+            <path d="M8,0 A8,8 0 0,0 8,16 Z" fill="#F2ECE5"/>
+            <path d="M8,0 A8,8 0 0,1 8,16 Z" fill="#F8F5F1"/>
+          </svg>
+        </div>
+        Light
+      </button>
+      <button class="l-aside-theme-btn" onclick="setTheme('warm',this)">
+        <div class="l-aside-theme-icon ">
+          <svg width="16" height="16" viewBox="0 0 16 16">
+            <path d="M8,0 A8,8 0 0,0 8,16 Z" fill="#4A362D"/>
+            <path d="M8,0 A8,8 0 0,1 8,16 Z" fill="#F8E9DC"/>
+          </svg>
+        </div>
+        Warm
+      </button>
+    </div>
   </div>
-</div>
-
-<a class="gh" href="https://github.com/yuichen-dev" target="_blank">↗ github.com/yuichen-dev</a>
+</aside>

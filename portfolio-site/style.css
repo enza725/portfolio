@@ -2,28 +2,26 @@
 @import 'css/left-aside.css';
 @import 'css/right-container.css';
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-/* ══ BASE ══ */
-body {
-  background: var(--bg);
-  font-family: 'Outfit', sans-serif;
-  color: var(--text);
-  min-height: 100vh;
-  display: flex; align-items: center; justify-content: center;
-  padding: 48px 24px;
-  transition: background 0.4s;
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  font-size: 10px;
 }
 
-/* ══ CARD — business card proportions ══ */
-.card {
+a {
+  text-decoration:  none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  color: var(--text);
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  width: 860px;
-  max-width: 100%;
-  min-height: 500px;
-  border-radius: 28px;
-  overflow: visible;        /* allow right panel to overflow */
-  position: relative;
-  box-shadow: var(--shadow);
-  transition: box-shadow 0.4s;
+  /* align-items: center; */
+  justify-content: space-around;
+  /* padding: 48px 24px; */
+  transition: background 0.4s;
 }
