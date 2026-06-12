@@ -1,16 +1,14 @@
-/* -----------------------
------- 右側のスタイル ------
------------------------ */
 #right-div {
-  width: 55%;
-  height: 100%;
   background: var(--right-bg);
+  padding: 6% 8% 0 0;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
   position: relative;
   transition: background 0.4s;
-  padding: 120px 150px 0 0;
-  z-index: 2;
 }
 
 /* -- 子要素が全て前にくる -- */
@@ -22,47 +20,101 @@
 #right-div::before {
   content: "";
   position: absolute;
-  left: -120px;
+  left: -15%;
   top: 0;
-  width: 250px;
+  width: 32%;
   height: 100%;
   background: var(--right-bg);
   border-radius: 55% 0 0 55%;
   transition: background 0.4s;
 }
 
+.right-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+/* ========= hamburger menu ========= */
+#r-mb-burger {
+  position: relative;
+  top: 0px;
+  right: -95%;
+  width: 30px;
+  height: 30px;
+  background: none;
+}
+
+@media (max-width: 768px) {
+  #right-div {
+    padding: clamp(5%, 3vw, 6%);
+  }
+
+  #right-div.hide-right {
+    max-width: 13%;
+  }
+
+  #right-div::before {
+    display: none;
+  }
+  
+  #r-mb-burger::before {
+    content: '';
+    position: absolute;
+    top: 12px; 
+    width: 25px; 
+    height: 3px;
+    background: var(--burger-btn);
+    border-radius: 2px;
+    transition: transform 0.4s;
+  }
+
+  #r-mb-burger.click::before {
+    right: 95%;
+    top: 0;
+    width: 30px;
+    /* transform: translate(-10px, 8px) rotate(45deg); */
+    transform: translate(-1%, 8px) rotate(45deg);
+    transition: transform 0.4s, top 0.4s;
+  }
+
+  #r-mb-burger::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%; 
+    height: 27px;
+    border-top: 3px solid var(--burger-btn);
+    border-bottom: 3px solid var(--burger-btn);
+    border-radius: 2px;
+    transition: transform 0.4s;
+  }
+
+  #r-mb-burger.click::after {
+    right: 96%;
+    top: -15px;
+    border-top: none;
+    /* transform: translate(-16px, 3px) rotate(-45deg); */
+    transform: translate(-24%, 3px) rotate(-45deg);
+    transition: transform 0.3s, top 0.3s;
+  }
+}
+
+/* ========= right top ========= */
 .r-top-div {
-  padding: 28px 56px 0 0;
+  padding: clamp(24px, 4vh, 30px) clamp(50px, 3.5vw, 64px) 0 0;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   justify-content: flex-end;
   flex-shrink: 1;
 }
 
-/*
-.r-index {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  color: var(--text-light);
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  transition: color 0.4s;
+@media (max-width: 768px) {
+  .r-top-div.hide-right {
+    display: none;
+  }
 }
-
-.r-index strong{
-  font-style: normal;
-  font-family: 'Outfit', sans-serif;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  transition: color 0.4s;
-}
-*/
 
 .r-contact-btn {
   background: none;
@@ -80,16 +132,26 @@
 .r-contact-btn:hover {
   border-color: var(--accent-border);
   color: var(--accent);
-  background: var(--accent-dim);
+  background: var(--accent-bg);
 }
 
-/*-- コンテナ --*/
+/* ========= right content =========*/
 .r-content {
   width: 100%;
   height: 100%;
-  padding: 24px 76px 40px 30px;
+  padding: clamp(20px, 3vh, 30px) clamp(40px, 5vw, 80px) clamp(24px, 2vw,24px);
   flex: 1;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .r-content {
+    padding: clamp(34px, 3vh, 40px) clamp(40px, 3vw, 60px);
+  }
+
+  .r-content.hide-right {
+    display: none;
+  }
 }
 
 .r-panel { 
@@ -134,7 +196,7 @@
   transition: background 0.4s;
 }
 
-/*-- ABOUT --*/
+/* ========== ABOUT ========= */
 #r-panel-about {
   width: 100%;
   height: 100%;
@@ -165,8 +227,10 @@
   transition: all 0.4s;
 }
 
-/*-- SKILLS --*/
+/* ========= SKILLS ========= */
 .r-skill-div { 
+  width: 100%;
+  height: 100%;
   margin-bottom: 20px;
 }
 
@@ -218,12 +282,12 @@
 }
 
 .r-skill-item:hover { 
-  background: var(--accent-dim);
+  background: var(--accent-bg);
   border-color: var(--accent-border);
   color: var(--accent);
 }
 
-/*-- PROJECTS --*/
+/* ========= PROJECTS ========= */
 .r-project-li {
   display: flex;
   flex-direction: column;
@@ -237,13 +301,13 @@
   border: 1px solid var(--border-light);
   background: var(--surface);
   cursor: pointer;
-  transition: all 0.22s;
+  transition: all 0.2s;
 }
 
 .r-project-item:hover {
   border-color: var(--accent-border);
   background: var(--r-bg);
-  box-shadow: 0 4px 18px var(--accent-dim);
+  box-shadow: 0 4px 18px var(--accent-bg);
   transform: translateX(4px);
 }
 
@@ -260,7 +324,7 @@
   font-size: 1.8rem;
   color: var(--border-light);
   text-align: center;
-  transition: color 0.22s;
+  transition: color 0.2s;
 }
 
 .r-project-item:hover .r-project-num {
@@ -303,7 +367,7 @@
 .r-project-item:hover .row-icon {
   border-color: var(--accent);
   color: var(--accent);
-  background: var(--accent-dim);
+  background: var(--accent-bg);
 }
 
 .r-project-viewall {
@@ -321,7 +385,7 @@
   gap: 10px;
 }
 
-/*-- CONTACT --*/
+/* ========= CONTACT ========= */
 .r-contact-sub {
   font-size: 1.2rem;
   color: var(--text-light);
@@ -368,7 +432,7 @@
 .r-contact-input:focus, .r-contact-textarea:focus {
   border-color: var(--accent-border);
   background: var(--r-bg);
-  box-shadow: 0 0 0 3px var(--accent-dim);
+  box-shadow: 0 0 0 3px var(--accent-bg);
 }
 
 .r-contact-textarea {
@@ -399,6 +463,6 @@
 .r-send-btn:hover {
   background: var(--accent);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px var(--accent-dim);
+  /* box-shadow: 0 4px 14px var(--accent-bg); */
   color: #fff;
 }

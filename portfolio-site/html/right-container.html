@@ -1,138 +1,138 @@
-<div class="r-top-div">
-  <!-- <div class="r-index">
-    <strong id="r-index-num">01</strong>
-    <span id="r-index-title">About Me</span>
-  </div> -->
-  <button class="r-contact-btn" onclick="navSelect('contact',document.querySelectorAll('.l-aside-ni')[3])">Contact Me</button>
-</div>
+<div class="right-container">
+  <div id="r-mb-burger"></div>
+  <div class="r-top-div">
+    <button class="r-contact-btn" onclick="navSelect('contact',document.querySelectorAll('.l-aside-ni')[3])">Contact Me</button>
+  </div>
 
-<div class="r-content">
-  <!-- ABOUT -->
-  <div class="r-panel active" id="r-panel-about">
-    <div>
+  <div class="r-content">
+    <!-- 余裕があったら、スマホ表示時にスライドができるようにしたい -->
+    <!-- ABOUT -->
+    <div class="r-panel active" id="r-panel-about">
+      <div>
+        <div class="r-panel-title">
+          <span class="dot"></span>
+          About Me
+        </div>
+        <p class="r-about-body">
+          台湾出身。<br>
+          日本で約10年暮らしています。現在はフロントエンドエンジニアとして4年目を迎えました。<br><br>
+          JavaScriptを中心とした開発経験を活かしながら、React、TypeScript、Next.jsを用いたフロントエンド開発を学び続けています。<br>
+          また、AIを活用した効率的な開発手法にも関心を持ち、日々の学習や開発に取り入れています。<br><br>
+          「作りながら学ぶ」をモットーに、ユーザーにとって使いやすく、心地よく体験を提供できるWebサイトやアプリケーション開発を目指しています。
+        </p>
+        <div class="r-about-traits">
+          <span class="r-about-trait"># 学ぶことが好き</span>
+          <span class="r-about-trait"># 音楽が好き</span>
+          <span class="r-about-trait"># ハリーポッターが好き</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="r-panel" id="r-panel-skills">
       <div class="r-panel-title">
         <span class="dot"></span>
-        About Me
+        Skills
       </div>
-      <p class="r-about-body">
-        台湾出身。<br>
-        日本で約10年暮らしています。現在はフロントエンドエンジニアとして4年目を迎えました。<br><br>
-        JavaScriptを中心とした開発経験を活かしながら、React、TypeScript、Next.jsを用いたフロントエンド開発を学び続けています。<br>
-        また、AIを活用した効率的な開発手法にも関心を持ち、日々の学習や開発に取り入れています。<br><br>
-        「作りながら学ぶ」をモットーに、ユーザーにとって使いやすく、心地よく体験を提供できるWebサイトやアプリケーション開発を目指しています。
-      </p>
-      <div class="r-about-traits">
-        <span class="r-about-trait"># 学ぶことが好き</span>
-        <span class="r-about-trait"># 音楽が好き</span>
-        <span class="r-about-trait"># ハリーポッターが好き</span>
+      <div class="r-skill-div">
+        <div class="r-skill-name">Frontend</div>
+        <div class="r-skill-li">
+          <span class="r-skill-item" data-years="４年">HTML</span>
+          <span class="r-skill-item" data-years="４年">CSS</span>
+          <span class="r-skill-item" data-years="４年">JavaScript</span>
+          <span class="r-skill-item" data-years="１年未満">TypeScript</span>
+          <span class="r-skill-item" data-years="１年未満">React</span>
+          <span class="r-skill-item" data-years="１年未満">Next.js</span>
+          <span class="r-skill-item" data-years="１年未満">Tailwind CSS</span>
+        </div>
+      </div>
+      <div class="r-skill-div">
+        <div class="r-skill-name">Tools</div>
+        <div class="r-skill-li">
+          <span class="r-skill-item" data-years="３年">AWS</span>
+          <span class="r-skill-item" data-years="１年">GitHub</span>
+          <span class="r-skill-item" data-years="１年">Sourcetree</span>
+          <span class="r-skill-item" data-years="１年">TortoiseGit</span>
+          <span class="r-skill-item" data-years="４年">VS Code</span>
+          <span class="r-skill-item" data-years="１年未満">Figma</span>
+        </div>
+      </div>
+      <div class="r-skill-div">
+        <div class="r-skill-name">Backend/Others</div>
+        <div class="r-skill-li">
+          <span class="r-skill-item" data-years="２年未満">Python</span>
+          <span class="r-skill-item" data-years="３年未満">Psql</span>
+          <span class="r-skill-item" data-years="３年未満">Linux</span>
+          <span class="r-skill-item" data-years="３年未満">FME</span>
+          <span class="r-skill-item" data-years="３年未満">GeoServer</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- SKILLS -->
-  <div class="r-panel" id="r-panel-skills">
-    <div class="r-panel-title">
-      <span class="dot"></span>
-      Skills
-    </div>
-    <div class="r-skill-div">
-      <div class="r-skill-name">Frontend</div>
-      <div class="r-skill-li">
-        <span class="r-skill-item" data-years="４年">HTML</span>
-        <span class="r-skill-item" data-years="４年">CSS</span>
-        <span class="r-skill-item" data-years="４年">JavaScript</span>
-        <span class="r-skill-item" data-years="１年未満">TypeScript</span>
-        <span class="r-skill-item" data-years="１年未満">React</span>
-        <span class="r-skill-item" data-years="１年未満">Next.js</span>
-        <span class="r-skill-item" data-years="１年未満">Tailwind CSS</span>
+    <!-- PROJECTS -->
+    <div class="r-panel" id="r-panel-projects">
+      <div class="r-panel-title">
+        <span class="dot"></span>
+        Projects
       </div>
-    </div>
-    <div class="r-skill-div">
-      <div class="r-skill-name">Tools</div>
-      <div class="r-skill-li">
-        <span class="r-skill-item" data-years="３年">AWS</span>
-        <span class="r-skill-item" data-years="１年">GitHub</span>
-        <span class="r-skill-item" data-years="１年">Sourcetree</span>
-        <span class="r-skill-item" data-years="１年">TortoiseGit</span>
-        <span class="r-skill-item" data-years="４年">VS Code</span>
-        <span class="r-skill-item" data-years="１年未満">Figma</span>
+      <div class="r-project-li">
+        <div class="r-project-item">
+          <a class="r-project-link" href="https://compass-japan03.com/recruit/" target="_blank">
+            <span class="r-project-num">01</span>
+            <span class="r-project-content">
+              <span class="r-project-name">Company Website</span>
+              <span class="r-project-sub">HTML · CSS · JavaScript — 会社のサイト（採用情報ページ）</span>
+            </span>
+            <span class="row-icon">↗</span>
+          </a>
+        </div>
+        <div class="r-project-item">
+          <a class="r-project-link">
+            <span class="r-project-num">02</span>
+            <span class="r-project-content">
+              <span class="r-project-name">Portfolio Website</span>
+              <span class="r-project-sub">HTML · CSS · JavaScript — このポートフォリオサイト</span>
+            </span>
+            <span class="row-icon">↗</span>
+          </a>
+        </div>
+        <div class="r-project-item">
+          <a class="r-project-link">
+            <div class="r-project-num">03</div>
+            <div class="r-project-content">
+              <div class="r-project-name">Tarot App</div>
+              <div class="r-project-sub">React · TypeScript ·  Next.js — タロットカードで占いができるアプリ</div>
+            </div>
+            <div class="row-icon">↗</div>
+          </a>
+        </div>
       </div>
+      <!-- <div class="r-project-viewall">View All Projects →</div> -->
     </div>
-    <div class="r-skill-div">
-      <div class="r-skill-name">Backend/Others</div>
-      <div class="r-skill-li">
-        <span class="r-skill-item" data-years="２年未満">Python</span>
-        <span class="r-skill-item" data-years="３年未満">Psql</span>
-        <span class="r-skill-item" data-years="３年未満">Linux</span>
-        <span class="r-skill-item" data-years="３年未満">FME</span>
-        <span class="r-skill-item" data-years="３年未満">GeoServer</span>
-      </div>
-    </div>
-  </div>
 
-  <!-- PROJECTS -->
-  <div class="r-panel" id="r-panel-projects">
-    <div class="r-panel-title">
-      <span class="dot"></span>
-      Projects
-    </div>
-    <div class="r-project-li">
-      <div class="r-project-item">
-        <a class="r-project-link" href="https://compass-japan03.com/recruit/" target="_blank">
-          <span class="r-project-num">01</span>
-          <span class="r-project-content">
-            <span class="r-project-name">Company Website</span>
-            <span class="r-project-sub">HTML · CSS · JavaScript — 会社のサイト（採用情報ページ）</span>
-          </span>
-          <span class="row-icon">↗</span>
-        </a>
+    <!-- CONTACT -->
+    <div class="r-panel" id="r-panel-contact">
+      <div class="r-panel-title">
+        <span class="dot"></span>
+        Contact Me
       </div>
-      <div class="r-project-item">
-        <a class="r-project-link">
-          <span class="r-project-num">02</span>
-          <span class="r-project-content">
-            <span class="r-project-name">Portfolio Website</span>
-            <span class="r-project-sub">HTML · CSS · JavaScript — このポートフォリオサイト</span>
-          </span>
-          <span class="row-icon">↗</span>
-        </a>
-      </div>
-      <div class="r-project-item">
-        <a class="r-project-link">
-          <div class="r-project-num">03</div>
-          <div class="r-project-content">
-            <div class="r-project-name">Tarot App</div>
-            <div class="r-project-sub">React · TypeScript ·  Next.js — タロットカードで占いができるアプリ</div>
-          </div>
-          <div class="row-icon">↗</div>
-        </a>
-      </div>
-    </div>
-    <!-- <div class="r-project-viewall">View All Projects →</div> -->
-  </div>
-
-  <!-- CONTACT -->
-  <div class="r-panel" id="r-panel-contact">
-    <div class="r-panel-title">
-      <span class="dot"></span>
-      Contact Me
-    </div>
-    <p class="r-contact-sub">どんな小さなことでも、気軽に声をかけてください！</p>
-    <div class="r-contact-form">
-      <div>
-        <label class="r-contact-label" for="contact-name">Name</label>
-        <input class="r-contact-input" name="name" id="contact-name" type="text" placeholder="Harry Potter">
-      </div>
-      <div>
-        <label class="r-contact-label" for="contact-email">Email</label>
-        <input class="r-contact-input" name="email" id="contact-email" type="email" placeholder="hogwarts@example.com">
-      </div>
-      <div class="r-contact-msg-div">
-        <label class="r-contact-label" for="contact-msg">Message</label>
-        <textarea class="r-contact-textarea" name="message" id="contact-msg" placeholder="こんにちは..."></textarea>
-      </div>
-      <div class="r-send-div">
-        <button class="r-send-btn">Send Message</button>
+      <p class="r-contact-sub">どんな小さなことでも、気軽に声をかけてください！</p>
+      <div class="r-contact-form">
+        <div>
+          <label class="r-contact-label" for="contact-name">Name</label>
+          <input class="r-contact-input" name="name" id="contact-name" type="text" placeholder="Harry Potter">
+        </div>
+        <div>
+          <label class="r-contact-label" for="contact-email">Email</label>
+          <input class="r-contact-input" name="email" id="contact-email" type="email" placeholder="hogwarts@example.com">
+        </div>
+        <div class="r-contact-msg-div">
+          <label class="r-contact-label" for="contact-msg">Message</label>
+          <textarea class="r-contact-textarea" name="message" id="contact-msg" placeholder="こんにちは..."></textarea>
+        </div>
+        <div class="r-send-div">
+          <button class="r-send-btn">Send Message</button>
+        </div>
       </div>
     </div>
   </div>

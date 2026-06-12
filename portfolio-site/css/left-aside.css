@@ -1,42 +1,65 @@
-/* -----------------------
------- 左側のスタイル ------
------------------------ */
 #left-div {
-  display: flex;
-  width: 45%;
-  max-width: 100%;
-  height: auto;
-  overflow: visible;
-  position: relative;
-  box-shadow: var(--shadow);
-  transition: box-shadow 0.4s;
-}
-
-.left-aside {
   background: var(--left-bg);
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-  padding: 30px 200px 30px 200px;
+  padding: clamp(2%, 3vh, 7%) clamp(9%, 12vw, 15%);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 45%;
+  height: 100%;
   position: relative;
-  overflow: hidden;
-  z-index: 2;
   transition: background 0.4s;
 }
 
 /* -- 子要素が全て前にくる -- */
-.left-aside > * { 
+#left-div > * { 
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  #left-div {
+    display: none;
+  }
+
+  #left-div.show-left {
+    display: block;
+    min-width: 87%;
+    animation: slideIn 0.4s ease-in-out;
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.left-aside {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+/* ========= aside top info ========= */
+.left-aside-top-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .l-aside-img-div {
   width: 100%;
   height: auto;
   padding-left: 14px;
-  margin-bottom: 10px;
+  margin-bottom: clamp(6px, 10px, 14px);
 }
 
 .l-aside-img-div div {
@@ -70,27 +93,46 @@
 }
 
 .l-aside-tagline {
+  width: 100%;
   font-size: 1.2rem;
   color: var(--on-left-muted);
   line-height: 1.85;
   font-weight: 300;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: clamp(14px, 20px, 26px);
+  padding-bottom: clamp(14px, 20px, 26px);
   border-bottom: 1px solid var(--border-dark);
   transition: color 0.4s, border-color 0.4s;
 }
 
-.l-aside-info {
+@media (max-width: 768px) {
+  .left-aside-top-info {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .l-aside-img-div {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .l-aside-tagline {
+    text-align: center;
+  }
+}
+
+/* ========= aside sub info ========= */
+.l-aside-sub-info {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: clamp(14px, 20px, 26px);
+  padding-bottom: clamp(14px, 20px, 26px);
   border-bottom: 1px solid var(--border-dark);
   transition: border-color 0.4s;
 }
 
-.l-aside-info-li a {
+.l-aside-sub-info-li a {
   font-size: 1.2rem;
   color: var(--on-left-muted);
   display: flex;
@@ -99,17 +141,17 @@
   transition: color 0.2s;
 }
 
-.l-aside-info-li .l-aside-info-sym { 
+.l-aside-sub-info-li .l-aside-sub-info-sym { 
   color: var(--accent);
   width: 11px;
   opacity: 0.75;
 }
 
-.l-aside-info-li a:hover { 
+.l-aside-sub-info-li a:hover { 
   color: var(--on-left);
 }
 
-/*--- ナビリスト ---*/
+/* ========= aside nav list ========= */
 .l-aside-nav { 
   display: flex;
   flex-direction: column;
@@ -121,7 +163,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 0;
+  padding: clamp(4px, 8px, 12px) 0;
   cursor: pointer;
   font-weight: 400;
   color: var(--on-left-muted);
@@ -139,7 +181,7 @@
   height: 0;
   background: var(--accent);
   border-radius: 0 2px 2px 0;
-  transition: height 0.28s cubic-bezier(0.34,1.56,0.64,1), 
+  transition: height 0.2s cubic-bezier(0.34,1.56,0.64,1), 
   background 0.4s;
 }
 
@@ -156,7 +198,7 @@
   justify-content: center;
   background: var(--border-dark);
   flex-shrink: 0;
-  transition: background 0.22s, box-shadow 0.22s;
+  transition: background 0.2s, box-shadow 0.2s;
 }
 
 .l-aside-ni.active .l-aside-ni-icon, .l-aside-ni:hover .l-aside-ni-icon {
@@ -166,7 +208,7 @@
 
 .l-aside-ni .l-aside-ni-icon svg { 
   stroke: var(--on-left-muted);
-  transition: stroke 0.22s;
+  transition: stroke 0.2s;
 }
 
 .l-aside-ni.active .l-aside-ni-icon svg, .l-aside-ni:hover .l-aside-ni-icon svg { 
@@ -183,8 +225,8 @@
   font-style: italic;
   color: var(--on-left-muted);
   opacity: 0.45;
-  transition: color 0.22s, 
-  opacity 0.22s;
+  transition: color 0.2s, 
+  opacity 0.2s;
 }
 
 .l-aside-ni.active .l-aside-ni-num, .l-aside-ni:hover .l-aside-ni-num {
@@ -205,10 +247,10 @@
   color: rgba(28,20,16,0.7);
 }
 
-/*--- テーマ切り替え ---*/
+/* ========= aside theme ========= */
 .l-aside-theme {
-  margin-top: 20px;
-  padding-top: 18px;
+  margin-top: clamp(14px, 20px, 26px);
+  padding-top: clamp(12px, 18px, 24px);
   border-top: 1px solid var(--border-dark);
   transition: border-color 0.4s;
 }
