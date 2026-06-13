@@ -1,10 +1,11 @@
 #left-div {
   background: var(--left-bg);
-  padding: clamp(2%, 3vh, 7%) clamp(10%, 15vw, 18%) clamp(2%, 3vh, 7%) clamp(3%, 5vw, 7%);
+  padding: clamp(2%, 4vh, 10%) clamp(10%, 15vw, 18%) clamp(2%, 3vh, 7%) clamp(3%, 5vw, 7%);
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   transition: background 0.4s;
 }
@@ -18,11 +19,12 @@
 @media (max-width: 768px) {
   #left-div {
     display: none;
+    min-width: 87%;
+    padding: clamp(5%, 6vh, 7%) 5%;
   }
 
   #left-div.show-left {
     display: block;
-    min-width: 87%;
     animation: slideIn 0.4s ease-in-out;
   }
   @keyframes slideIn {

@@ -1,8 +1,13 @@
 #right-div {
   background: var(--right-bg);
   padding-top: 5%;
-  display: grid;
-  grid-template-columns: 1fr;
+  height: 100%;
+  /* display: grid;
+  grid-template-columns: 1fr; */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
   flex: 1;
   position: relative;
   transition: background 0.4s;
@@ -299,7 +304,7 @@
 .r-project-item:hover {
   border-color: var(--accent-border);
   background: var(--r-bg);
-  box-shadow: 0 4px 18px var(--accent-bg);
+  box-shadow: 0 2px 8px var(--accent-bg);
   transform: translateX(4px);
 }
 
