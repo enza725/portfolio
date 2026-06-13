@@ -1,12 +1,10 @@
 #left-div {
   background: var(--left-bg);
-  padding: clamp(2%, 3vh, 7%) clamp(9%, 12vw, 15%);
+  padding: clamp(2%, 3vh, 7%) clamp(10%, 15vw, 18%) clamp(2%, 3vh, 7%) clamp(3%, 5vw, 7%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex: 0 0 45%;
-  height: 100%;
   position: relative;
   transition: background 0.4s;
 }
@@ -40,7 +38,6 @@
 }
 
 .left-aside {
-  height: 100%;
   max-height: 1024px;
   display: flex;
   flex-direction: column;
