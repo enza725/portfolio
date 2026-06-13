@@ -73,3 +73,27 @@ function asideDivToggle() {
   rightTop.classList.toggle('hide-right');
   rightContent.classList.toggle('hide-right');
 }
+
+/* ============= メール送信 ============= */
+emailjs.init({
+  publicKey: "vzCo4P84GdDa4CZoO",
+});
+
+const form = document.querySelector(".r-contact-form");
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();  
+  try {
+    await emailjs.sendForm(
+      "service_j5b99ct",
+      "template_nwxc4yu",
+      this
+    );
+    alert("送信成功！");
+    form.reset();
+
+  } catch (err) {
+    alert("送信失敗！");
+    console.error(err);
+  }
+});

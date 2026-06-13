@@ -117,23 +117,23 @@
         Contact Me
       </div>
       <p class="r-contact-sub">どんな小さなことでも、気軽に声をかけてください！</p>
-      <div class="r-contact-form">
+      <form class="r-contact-form">
         <div>
           <label class="r-contact-label" for="contact-name">Name</label>
-          <input class="r-contact-input" name="name" id="contact-name" type="text" placeholder="Harry Potter">
+          <input class="r-contact-input" name="user_name" id="contact-name" type="text" placeholder="Harry Potter">
         </div>
         <div>
           <label class="r-contact-label" for="contact-email">Email</label>
-          <input class="r-contact-input" name="email" id="contact-email" type="email" placeholder="hogwarts@example.com">
+          <input class="r-contact-input" name="user_email" id="contact-email" type="email" placeholder="hogwarts@example.com">
         </div>
         <div class="r-contact-msg-div">
           <label class="r-contact-label" for="contact-msg">Message</label>
-          <textarea class="r-contact-textarea" name="message" id="contact-msg" placeholder="こんにちは..."></textarea>
+          <textarea class="r-contact-textarea" name="user_message" id="contact-msg" placeholder="こんにちは..."></textarea>
         </div>
         <div class="r-send-div">
-          <button class="r-send-btn">Send Message</button>
+          <button class="r-send-btn" type="submit">Send Message</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </div>

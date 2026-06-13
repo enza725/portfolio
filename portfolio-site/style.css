@@ -17,7 +17,6 @@ a {
 body {
   font-family: 'Outfit', sans-serif;
   color: var(--text);
-  background: var(--right-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,10 +24,16 @@ body {
 
 #main {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
+  background: var(--right-bg);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   transition: background 0.4s;
+}
+
+@media (max-width: 375px) {
+  #main {
+    padding: 7% 0;
+  }
 }
