@@ -7,6 +7,7 @@ async function init() {
   });
 
   sendMail();
+  showYears();
 }
 
 init();
@@ -99,5 +100,17 @@ function sendMail() {
       alert("送信失敗！");
       console.error(err);
     }
+  });
+}
+
+/* ============= スキルの経験年数表示 ============= */
+function showYears() {
+  let skillItems = document.querySelectorAll('.r-skill-item');
+  skillItems.forEach(item => {
+    item.addEventListener("click", () => {
+      if (window.matchMedia("(hover: none)").matches) {
+        item.classList.toggle("show-years");
+      }
+    });
   });
 }

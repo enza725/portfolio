@@ -274,13 +274,13 @@
   transition: opacity 0.2s;
 }
 
-.r-skill-item:hover::after, 
-.r-skill-item:active::after {
+.r-skill-item:hover::after,
+.r-skill-item.show-years::after {
   opacity: 1;
 }
 
-.r-skill-item:hover, 
-.r-skill-item:active { 
+.r-skill-item:hover,
+.r-skill-item.show-years { 
   background: var(--accent-bg);
   border-color: var(--accent-border);
   color: var(--accent);
