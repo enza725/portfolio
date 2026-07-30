@@ -106,14 +106,17 @@ function sendMail() {
 /* ============= スキルの経験年数表示 ============= */
 function showYears() {
   let skillItems = document.querySelectorAll('.r-skill-item');
+  const isTouchDevice = window.matchMedia("(hover: none)").matches;
+
   skillItems.forEach(item => {
-    item.classList.remove("show-years");
-  });
-  skillItems.forEach(item => {    
     item.addEventListener("click", () => {
-      if (window.matchMedia("(hover: none)").matches) {
-        item.classList.add("show-years");
-      }
+      if (!isTouchDevice) return;
+  
+      skillItems.forEach(skill => {
+        skill.classList.remove("show-years");
+      });
+  
+      item.classList.add("show-years");
     });
   });
 }
