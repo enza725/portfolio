@@ -107,9 +107,12 @@ function sendMail() {
 function showYears() {
   let skillItems = document.querySelectorAll('.r-skill-item');
   skillItems.forEach(item => {
+    item.classList.remove("show-years");
+  });
+  skillItems.forEach(item => {    
     item.addEventListener("click", () => {
       if (window.matchMedia("(hover: none)").matches) {
-        item.classList.toggle("show-years");
+        item.classList.add("show-years");
       }
     });
   });
